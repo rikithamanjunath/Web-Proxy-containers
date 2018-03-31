@@ -1,4 +1,6 @@
 # General
+Docker-tomcat/.idea/
+*/.idea/
 *.DS_Store
 .DS_Store
 .AppleDouble
