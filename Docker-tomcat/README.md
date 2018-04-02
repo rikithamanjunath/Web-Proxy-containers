@@ -41,7 +41,7 @@
        minikube dashboard 
     
     2. Instead of pushing your Docker image to a registry, you can simply build the image using the same Docker host as the Minikube VM, so that the images are automatically present. To do so, make sure you are using the Minikube Docker daemon:
-       eval $(minikube docker-env)
+       **eval $(minikube docker-env)**
     
     3. Build your Docker image, using the Minikube Docker daemon
        docker build -t docker-tomcat:v2 .
