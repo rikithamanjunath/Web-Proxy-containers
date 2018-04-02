@@ -30,8 +30,8 @@
         <entry file="file://$PROJECT_DIR$/Docker-tomcat/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="107">
-                <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="36" />
+              <first_editor relative-caret-position="415">
+                <caret line="77" column="8" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -40,6 +40,14 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>v2</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>v1</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -193,8 +201,8 @@
     <entry file="file://$PROJECT_DIR$/Docker-tomcat/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="107">
-            <caret line="43" column="36" lean-forward="true" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="36" />
+          <first_editor relative-caret-position="415">
+            <caret line="77" column="8" lean-forward="false" selection-start-line="77" selection-start-column="8" selection-end-line="77" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />

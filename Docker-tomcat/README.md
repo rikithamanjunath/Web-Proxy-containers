@@ -1,10 +1,10 @@
 ### Basic Building Docker Commands 
 	#  . indicates current folder, you should run only where docker file is present
-	docker build -t docker-tomcat:1.0 .  # equivalent of compiling
+	docker build -t docker-tomcat:v1 .  # equivalent of compiling
 	docker images
 	
 ### Basic Running Commands	
-	docker run -d -p 8080:8080 -p 8100:8100 docker-tomcat:1.0  # running the code
+	docker run -d -p 8080:8080 docker-tomcat:v1  # running the code
 	docker exec -it containerid /bin/bash  
 	docker ps  
 	docker kill <containerid>
@@ -12,15 +12,15 @@
 	
 	To go inside the container and check the html file 
 	docker exec -it containerid /bin/bash
-# READ 
+### READ 
         https://docker-curriculum.com/	
         
         
 
 
-## Delete all containers
+### Delete all containers
     docker rm $(docker ps -a -q)
-## Delete all images
+### Delete all images
     docker rmi $(docker images -q)
 
 
@@ -31,7 +31,7 @@
     
 ### Deploy the container to Kubernetes(Minikube)
 
-####Read and Follow
+### Read and Follow
    https://kubernetes.io/docs/tutorials/stateless-application/hello-minikube/#create-a-docker-container-image
     
     After installing Minikube follow these steps for deploying docker conatiner to kubernetes
@@ -44,10 +44,10 @@
        **eval $(minikube docker-env)**
     
     3. Build your Docker image, using the Minikube Docker daemon
-       docker build -t docker-tomcat:v2 .
+       docker build -t docker-tomcat:v1 .
     
-    4. Use the kubectl run command to create a Deployment that manages a Pod. The Pod runs a Container based on your docker-tomcat:v2 Docker image:
-       kubectl run docker-tomcat --image=docker-tomcat:v2 --port=8080
+    4. Use the kubectl run command to create a Deployment that manages a Pod. The Pod runs a Container based on your docker-tomcat:v1 Docker image:
+       kubectl run docker-tomcat --image=docker-tomcat:v1 --port=8080
        kubectl get pods  // Check the pods
        kubectl get events
 
@@ -66,15 +66,19 @@
        $ #!/bin/sh
        $ a=0
        $ 
-       $ while [ $a -lt 10 ]
+       $ while [ $a -lt 5 ]
        > do
        > echo $a
        > a=`expr $a + 1`
-       > echo "killing node server/container every minute"
+       > echo "killing tom-cat /container every minute"
        > ps -ef | grep "tomcat" | cut -d ' ' -f6 | xargs sudo kill -9
-       > sleep 1m
+       > sleep 2m
        > done
-
-
-    
-    Go to minikube dashboard to see the changes
+    8. Go to minikube dashboard to see the changes
+        You should see container getting terminated and coming backup every minute
+    9. Clean up
+        Now you can clean up the resources you created in your cluster:
+            kubectl delete service docker-tomcat
+            kubectl delete deployment docker-tomcat 
+    10. Optionally, stop the Minikube VM:
+        minikube stop
