@@ -5,14 +5,14 @@
 	
 ### Basic Running Commands	
 	docker run -d -p 8080:8080 -p 8100:8100 docker-tomcat:1.0  # running the code
-	docker exec -it containerid /bin/bash
-	docker ps
+	docker exec -it containerid /bin/bash  
+	docker ps  
 	docker kill <containerid>
 	
 	
-	To go inside the container and check the html file
-	docker exec -it 5dabed814270 /bin/bash
-### READ
+	To go inside the container and check the html file 
+	docker exec -it containerid /bin/bash
+# READ 
         https://docker-curriculum.com/	
         
         
