@@ -61,7 +61,7 @@
     7. To kill uninteruptedly, Login to minikube
        minikube ssh
        
-       Execute this script, killing the container every minute
+       Execute this script, killing the container every 2 minutes
        
        $ #!/bin/sh
        $ a=0
@@ -75,7 +75,7 @@
        > sleep 2m
        > done
     8. Go to minikube dashboard to see the changes
-        You should see container getting terminated and coming backup every minute
+        You should see container getting terminated and coming backup every 2 minutes
     9. Clean up
         Now you can clean up the resources you created in your cluster:
             kubectl delete service docker-tomcat
