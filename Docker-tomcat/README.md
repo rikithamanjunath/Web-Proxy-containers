@@ -66,17 +66,16 @@
        
        Execute this script, killing the container every 2 minutes
        
-       $ #!/bin/sh
-       $ a=0
-       $ 
-       $ while [ $a -lt 5 ]
-       > do
-       > echo $a
-       > a=`expr $a + 1`
-       > echo "killing tom-cat /container every minute"
-       > ps -ef | grep "tomcat" | cut -d ' ' -f6 | xargs sudo kill -9
-       > sleep 2m
-       > done
+         #!/bin/sh
+         a=0 
+       	 while [ $a -lt 5 ]
+         do
+         echo $a
+         a=`expr $a + 1`
+         echo "killing tom-cat /container every minute"
+         ps -ef | grep "tomcat" | cut -d ' ' -f6 | xargs sudo kill -9
+         sleep 2m
+         done
     8. Go to minikube dashboard to see the changes
         You should see container getting terminated and coming backup every 2 minutes
     9. Clean up
