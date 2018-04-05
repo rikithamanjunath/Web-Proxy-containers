@@ -1,3 +1,6 @@
+### Prerequisites
+    Install Docker
+    
 ### Basic Building Docker Commands 
 	#  . indicates current folder, you should run only where docker file is present
 	docker build -t docker-tomcat:v1 .  # equivalent of compiling
